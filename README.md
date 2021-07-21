@@ -4,4 +4,4 @@
 
 # sekure-postman-collection
 ## This repository has the Postman collection needed to interact with our API
-[visita nuestra documentación] (https://skr.developer.azure-api.net/docs)
+[chek our docs] (https://skr.developer.azure-api.net/docs)
