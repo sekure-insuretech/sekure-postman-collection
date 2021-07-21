@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "1be26fcd-d1aa-4ea8-8705-2a250f2ff914",
+		"name": "Sekure OS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Products",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Products/<<selected product>>",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Products",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "<<your developer email>>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Products/Quote",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Products/Confirm/<<sekure id>>",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Products",
+						"Confirm",
+						"<<sekure id>>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Products/Stage/<<sekure id>>",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Products",
+						"Stage",
+						"<<sekure id>>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfigurationPayment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Payment/Configuration/paymentGatewayName=paymentgateway&productName=upay",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Payment",
+						"Configuration",
+						"paymentGatewayName=credibanco&productName=ipay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Payment",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PaymentStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<your key>>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OS/Payment/Status",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OS",
+						"Payment",
+						"Status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
