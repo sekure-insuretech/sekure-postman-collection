@@ -24,7 +24,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Products",
+					"raw": "https://api.sekure.com.co/OS/Products",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -51,7 +51,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Products/<<selected product>>",
+					"raw": "https://api.sekure.com.co/OS/Products/<<selected product>>",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -93,7 +93,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Products/Quote",
+					"raw": "https://api.sekure.com.co/OS/Products/Quote",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -125,7 +125,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Products/Confirm/<<sekure id>>",
+					"raw": "https://api.sekure.com.co/OS/Products/Confirm/<<sekure id>>",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -154,7 +154,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Products/Stage/<<sekure id>>",
+					"raw": "https://api.sekure.com.co/OS/Products/Stage/<<sekure id>>",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -183,7 +183,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Payment/Configuration/paymentGatewayName=paymentgateway&productName=upay",
+					"raw": "https://api.sekure.com.co/OS/Payment/Configuration/paymentGatewayName=paymentgateway&productName=upay",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -221,7 +221,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Payment",
+					"raw": "https://api.sekure.com.co/OS/Payment",
 					"protocol": "https",
 					"host": [
 						"skr",
@@ -257,7 +257,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://skr.azure-api.net/OS/Payment/Status",
+					"raw": "https://api.sekure.com.co/OS/Payment/Status",
 					"protocol": "https",
 					"host": [
 						"skr",
