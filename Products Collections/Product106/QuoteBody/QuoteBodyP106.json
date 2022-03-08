@@ -1,0 +1,235 @@
+{
+    "productDetail": {
+        "productId": 106,
+        "productName": "Exequias Familiar Plenitud",
+        "policyTypeName": "Plan Exequial",
+        "insuranceCompanyName": "Plenitud"
+    },
+    "policyHolder": 
+        {
+            "firstName": "Usuario",
+            "secondName": "Prueba",
+            "lastName": "Sekure",
+            "secondLastName": "Latam",
+            "birthdate": "2022-02-18T00:00:00Z",
+            "gender": "m",
+            "address": "Carrera 100 # 134 -10",
+            "identificationType": "1",
+            "identificationNumber": "1078985631",
+            "maritalStatus": "1",
+            "email": "prueba@email.com",
+            "phoneNumber": "3154789856"
+        },      
+    "parameters": [
+        {
+            "name": "Tomador",
+            "inputParameterId": 341,
+            "inputParameterType": "Object",
+            "inputParameterValue": null,
+            "inputParameterDescription": "Tomador",
+            "inputParameterRequired": "true",
+            "showApi": true,
+            "inputParameterSchemaList": [
+                {
+                    "propertyId": "431",
+                    "propertyName": "Fecha de nacimiento",
+                    "propertyValue": "01/01/1990",
+                    "propertyDescription": "Formato: MM/dd/yyyy",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "432",
+                    "propertyName": "Periodo de pago",
+                    "propertyValue": "2",
+                    "propertyDescription": "1. Semestral, 2. Anual",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "465",
+                    "propertyName": "Ciudad",
+                    "propertyValue": "Medellin",
+                    "propertyDescription": "Ciudad",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "466",
+                    "propertyName": "Dirección",
+                    "propertyValue": "Calle 10 abc 123",
+                    "propertyDescription": "Dirección",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "467",
+                    "propertyName": "Departamento",
+                    "propertyValue": "Antioquia",
+                    "propertyDescription": "Departamento",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                }
+            ]
+        },
+        {
+            "name": "Beneficiarios",
+            "inputParameterId": 342,
+            "inputParameterType": "Object",
+            "inputParameterValue": null,
+            "inputParameterDescription": "Beneficiarios",
+            "inputParameterRequired": "true",
+            "showApi": true,
+            "inputParameterSchemaList": [
+                {
+                    "propertyId": "433",
+                    "propertyName": "Primer nombre",
+                    "propertyValue": "Sekure",
+                    "propertyDescription": "Primer nombre",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "434",
+                    "propertyName": "Segundo nombre",
+                    "propertyValue": "Usuario",
+                    "propertyDescription": "Segundo nombre",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "435",
+                    "propertyName": "Primer apellido",
+                    "propertyValue": "Prueba",
+                    "propertyDescription": "Primer apellido",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "436",
+                    "propertyName": "Segundo apellido",
+                    "propertyValue": "",
+                    "propertyDescription": "Segundo apellido",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "437",
+                    "propertyName": "Género",
+                    "propertyValue": "1",
+                    "propertyDescription": "1. Masculino, 2. Femenino",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "438",
+                    "propertyName": "Tipo Identificación",
+                    "propertyValue": "1",
+                    "propertyDescription": "1. Cédula ciudadanía, 2. Cédula extranjería, 3. Tarjeta de identidad, 4. Pasaporte",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "439",
+                    "propertyName": "Número Identificación",
+                    "propertyValue": "1078985631",
+                    "propertyDescription": "Número Identificación",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "440",
+                    "propertyName": "Fecha de nacimiento",
+                    "propertyValue": "01/01/1990",
+                    "propertyDescription": "Formato: MM/dd/yyyy",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "441",
+                    "propertyName": "Parentesco",
+                    "propertyValue": "3",
+                    "propertyDescription": "3. Conyuge, 4. Hijos",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "442",
+                    "propertyName": "Ciudad",
+                    "propertyValue": "Medellin",
+                    "propertyDescription": "Ciudad",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "443",
+                    "propertyName": "Dirección",
+                    "propertyValue": "Calle 10 ABC 123",
+                    "propertyDescription": "Dirección",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "468",
+                    "propertyName": "Departamento",
+                    "propertyValue": "Antioquia",
+                    "propertyDescription": "Departamento",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                }
+            ]
+        }
+    ]
+    
+}

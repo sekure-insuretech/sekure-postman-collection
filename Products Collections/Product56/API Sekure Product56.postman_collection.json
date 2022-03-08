@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "33e8fe86-700d-4474-bb56-fdfa6609855e",
+		"name": "API Sekure Product56",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/56",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 56,\r\n        \"productName\": \"D2C HOGAR\",\r\n        \"policyTypeName\": \"Hogar\",\r\n        \"insuranceCompanyName\": \"CHUBB\"\r\n    },\r\n    \"policyHolder\": \r\n        {\r\n            \"firstName\": \"Usuario\",\r\n            \"secondName\": \"Prueba\",\r\n            \"lastName\": \"Sekure\",\r\n            \"secondLastName\": \"Latam\",\r\n            \"birthdate\": \"2022-02-18T00:00:00Z\",\r\n            \"gender\": \"m\",\r\n            \"address\": \"Carrera 100 # 134 -10\",\r\n            \"identificationType\": \"1\",\r\n            \"identificationNumber\": \"1078985631\",\r\n            \"maritalStatus\": \"1\",\r\n            \"email\": \"prueba@email.com\",\r\n            \"phoneNumber\": \"3154789856\"\r\n        },      \r\n    \"parameters\": [\r\n        {\r\n            \"name\": \"Elemento asegurar\",\r\n            \"inputParameterId\": 216,\r\n            \"inputParameterType\": \"Numeric\",\r\n            \"inputParameterValue\": 2, \r\n            \"inputParameterDescription\": \"1.Edificio, 2.Contenido, 3.Edificio+Contenido\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Año de construcció\",\r\n            \"inputParameterId\": 217,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": 1994,\r\n            \"inputParameterDescription\": \"Año en que fue construida la propiedad\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Tipo de estructura\",\r\n            \"inputParameterId\": 218,\r\n            \"inputParameterType\": \"Numeric\",\r\n            \"inputParameterValue\": 19,\r\n            \"inputParameterDescription\": \"6.Concreto reforzado, 10.Mampostería estructural, 13.Acero, 15.Madera, 19.Adobe\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Quote",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Confirm/<<SessionID>>",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Confirm",
+						"<<SessionID>>"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL-API-Sekure",
+			"value": "<<URL API Sekure>>"
+		},
+		{
+			"key": "YourApiKey",
+			"value": "<<Your Api Key>>"
+		},
+		{
+			"key": "YourDeveloperEmail",
+			"value": "<<Developer Email>>"
+		}
+	]
+}

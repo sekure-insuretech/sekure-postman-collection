@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "4e377aeb-1577-4031-997e-9780b7922fc7",
+		"name": "API Sekure Product74",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/74",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 74,\r\n        \"productName\": \"AP Individual\",\r\n        \"policyTypeName\": \"Accidentes Personales\",\r\n        \"insuranceCompanyName\": \"AXA Colpatria\"\r\n    },\r\n    \"policyHolder\": \r\n        {\r\n            \"firstName\": \"Usuario\",\r\n            \"secondName\": \"Prueba\",\r\n            \"lastName\": \"Sekure\",\r\n            \"secondLastName\": \"Latam\",\r\n            \"birthdate\": \"2022-02-18T00:00:00Z\",\r\n            \"gender\": \"m\",\r\n            \"address\": \"Carrera 100 # 134 -10\",\r\n            \"identificationType\": \"1\",\r\n            \"identificationNumber\": \"1078985631\",\r\n            \"maritalStatus\": \"1\",\r\n            \"email\": \"prueba@email.com\",\r\n            \"phoneNumber\": \"3154789856\"\r\n        },      \r\n    \"parameters\": [\r\n        {\r\n            \"name\": \"Fecha nacimiento\",\r\n            \"inputParameterId\": 252,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"01/01/1990\",\r\n            \"inputParameterDescription\": \"Fecha nacimiento Formato: MM/dd/yyyy\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Tipo producto\",\r\n            \"inputParameterId\": 253,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"2\",\r\n            \"inputParameterDescription\": \"1. Voluntario, 2. Mandatorio\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Fecha expedicion\",\r\n            \"inputParameterId\": 259,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"01/01/2022\",\r\n            \"inputParameterDescription\": \"Fecha expedicion Formato: MM/dd/yyyy\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Quote",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Confirm/<<SessionID>>",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Confirm",
+						"<<SessionID>>"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL-API-Sekure",
+			"value": "<<URL API Sekure>>"
+		},
+		{
+			"key": "YourApiKey",
+			"value": "<<Your Api Key>>"
+		},
+		{
+			"key": "YourDeveloperEmail",
+			"value": "<<Developer Email>>"
+		}
+	]
+}

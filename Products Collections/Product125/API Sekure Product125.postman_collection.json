@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "95430dd2-d442-4d53-ac27-6b46794d5a52",
+		"name": "API Sekure Product125",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/125",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"125"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 125,\r\n        \"productName\": \"Asistencia en viaje\",\r\n        \"policyTypeName\": \"Asistencias\",\r\n        \"insuranceCompanyName\": \"Andi Asistencia\"\r\n    },\r\n    \"policyHolder\": \r\n        {\r\n            \"firstName\": \"Usuario\",\r\n            \"secondName\": \"Prueba\",\r\n            \"lastName\": \"Sekure\",\r\n            \"secondLastName\": \"Latam\",\r\n            \"birthdate\": \"2022-02-18T00:00:00Z\",\r\n            \"gender\": \"m\",\r\n            \"address\": \"Carrera 100 # 134 -10\",\r\n            \"identificationType\": \"1\",\r\n            \"identificationNumber\": \"1078985631\",\r\n            \"maritalStatus\": \"1\",\r\n            \"email\": \"prueba@email.com\",\r\n            \"phoneNumber\": \"3154789856\"\r\n        },      \r\n    \"parameters\": [\r\n        {\r\n            \"name\": \"Fecha de nacimiento\",\r\n            \"inputParameterId\": 421,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"1990-01-01\",\r\n            \"inputParameterDescription\": \"Formato yyyy-MM-dd\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Continente destino\",\r\n            \"inputParameterId\": 422,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"NA\",\r\n            \"inputParameterDescription\": \"África = AF, Asía = AS, Europa = EU, América del sur = SA, América del norte = NA, Oceanía = OC\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Periodo de póliza\",\r\n            \"inputParameterId\": 424,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"30\",\r\n            \"inputParameterDescription\": \"8 días = 8, 15 días = 15, 30 días = 30, 60 días = 60, 90 días = 90\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Quote",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Confirm/<<SessionID>>",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Confirm",
+						"<<SessionID>>"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL-API-Sekure",
+			"value": "<<URL API Sekure>>"
+		},
+		{
+			"key": "YourApiKey",
+			"value": "<<Your Api Key>>"
+		},
+		{
+			"key": "YourDeveloperEmail",
+			"value": "<<Developer Email>>"
+		}
+	]
+}
