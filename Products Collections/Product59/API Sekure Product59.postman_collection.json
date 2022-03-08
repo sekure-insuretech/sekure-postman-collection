@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "e2baefe2-3804-4e30-adb8-7fb97140bd53",
+		"name": "API Sekure Product59",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/59",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 59,\r\n        \"productName\": \"VIDA\",\r\n        \"policyTypeName\": \"Vida\",\r\n        \"insuranceCompanyName\": \"Sura\"\r\n    },\r\n    \"policyHolder\": \r\n        {\r\n            \"firstName\": \"Usuario\",\r\n            \"secondName\": \"Prueba\",\r\n            \"lastName\": \"Sekure\",\r\n            \"secondLastName\": \"Latam\",\r\n            \"birthdate\": \"2022-02-18T00:00:00Z\",\r\n            \"gender\": \"m\",\r\n            \"address\": \"Carrera 100 # 134 -10\",\r\n            \"identificationType\": \"1\",\r\n            \"identificationNumber\": \"1078985631\",\r\n            \"maritalStatus\": \"1\",\r\n            \"email\": \"prueba@email.com\",\r\n            \"phoneNumber\": \"3154789856\"\r\n        },      \r\n    \"parameters\": [\r\n        {\r\n            \"name\": \"Fecha Nacimiento\",\r\n            \"inputParameterId\": 219,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"01/01/1990\",\r\n            \"inputParameterDescription\": \"Fecha Nacimiento\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Valor asegurado \",\r\n            \"inputParameterId\": 220,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"7\",\r\n            \"inputParameterDescription\": \"5 = $ 70.000.000 a $ 89.000.000, 6 = $ 100.000.000 a $ 149.000.000, 7 = $ 150.000.000 a $ 190.000.000, 8 = $ 200.000.000 en adelante\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Quote",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Confirm/<<SessionID>>",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Confirm",
+						"<<SessionID>>"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL-API-Sekure",
+			"value": "<<URL API Sekure>>"
+		},
+		{
+			"key": "YourApiKey",
+			"value": "<<Your Api Key>>"
+		},
+		{
+			"key": "YourDeveloperEmail",
+			"value": "<<Developer Email>>"
+		}
+	]
+}

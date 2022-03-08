@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "3639da46-3f3b-4eb7-9270-77994d678adf",
+		"name": "API Sekure Product18",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/18",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "customer-email",
+						"value": "{{YourDeveloperEmail}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 18,\r\n        \"productName\": \"Accidentes Personales - Covid\",\r\n        \"policyTypeName\": \"Accidentes Personales\",\r\n        \"insuranceCompanyName\": \"SBS\"\r\n    },\r\n    \"policyHolder\":\r\n        {\r\n            \"firstName\": \"Usuario\",\r\n            \"secondName\": \"Prueba\",\r\n            \"lastName\": \"Sekure\",\r\n            \"secondLastName\": \"Latam\",\r\n            \"birthdate\": \"2022-02-18T00:00:00Z\",\r\n            \"gender\": \"m\",\r\n            \"address\": \"Carrera 100 # 134 -10\",\r\n            \"identificationType\": \"1\",\r\n            \"identificationNumber\": \"1078985631\",\r\n            \"maritalStatus\": \"1\",\r\n            \"email\": \"prueba@email.com\",\r\n            \"phoneNumber\": \"3154789856\"\r\n        },   \r\n    \"parameters\": [\r\n        {\r\n            \"name\": \"Opcion Amparo\",\r\n            \"inputParameterId\": 58,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"Introduca A,B para ver las diferentes polizas\",\r\n            \"inputParameterDescription\": \"Opcion Amparo\",\r\n            \"inputParameterRequired\": \"false\",\r\n            \"showApi\": false,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL-API-Sekure}}/Products/Quote",
+					"host": [
+						"{{URL-API-Sekure}}"
+					],
+					"path": [
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "<<Your Api Key>>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "<<URL API Sekure>>/Products/Confirm/",
+					"host": [
+						"<<URL API Sekure>>"
+					],
+					"path": [
+						"Products",
+						"Confirm",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URL-API-Sekure",
+			"value": "https://api.sekure.com.co/OSStage"
+		},
+		{
+			"key": "YourApiKey",
+			"value": "ec151c0d3e6648f88b4a65fc3a0b1ab1"
+		},
+		{
+			"key": "YourDeveloperEmail",
+			"value": "daniel.gomez@sekure.com.co"
+		}
+	]
+}

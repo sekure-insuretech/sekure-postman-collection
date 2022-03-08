@@ -1,0 +1,203 @@
+{
+    "productDetail": {
+        "productId": 40,
+        "productName": "Asistencia Médica Domiciliaria",
+        "policyTypeName": "Asistencias",
+        "insuranceCompanyName": "Emermédica"
+    },
+    "policyHolder": 
+        {
+            "firstName": "Usuario",
+            "secondName": "Prueba",
+            "lastName": "Sekure",
+            "secondLastName": "Latam",
+            "birthdate": "2022-02-18T00:00:00Z",
+            "gender": "m",
+            "address": "Carrera 100 # 134 -10",
+            "identificationType": "1",
+            "identificationNumber": "1078985631",
+            "maritalStatus": "1",
+            "email": "prueba@email.com",
+            "phoneNumber": "3154789856"
+        },
+    
+    "parameters": [
+        {
+            "name": "Beneficiarios",
+            "inputParameterId": 96,
+            "inputParameterType": "Object",
+            "inputParameterValue": null,
+            "inputParameterDescription": "Beneficiarios",
+            "inputParameterRequired": "false",
+            "showApi": false,
+            "inputParameterSchemaList": [
+                {
+                    "propertyId": "122",
+                    "propertyName": "Nombres",
+                    "propertyValue": "Usuario",
+                    "propertyDescription": "Nombres del beneficiario a agregar",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "123",
+                    "propertyName": "Apellidos",
+                    "propertyValue": "Prueba Sekure",
+                    "propertyDescription": "Apellidos del beneficiario a agregar",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "124",
+                    "propertyName": "Teléfono",
+                    "propertyValue": "3154789856",
+                    "propertyDescription": "Teléfono del beneficiario a agregar",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "125",
+                    "propertyName": "Email",
+                    "propertyValue": "soporte@sekure.com.co",
+                    "propertyDescription": "Correo electrónico del beneficiario a agregar ",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "126",
+                    "propertyName": "Género",
+                    "propertyValue": "1",
+                    "propertyDescription": "Género del beneficiario a agregar",
+                    "propertyTypeDescription": "List",
+                    "propertyTypeId": 3,
+                    "propertyTypeListValue": "1-Masculino,2-Femenino",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "127",
+                    "propertyName": "Parentesco",
+                    "propertyValue": "1",
+                    "propertyDescription": "Parentesco del beneficiario a agregar",
+                    "propertyTypeDescription": "List",
+                    "propertyTypeId": 3,
+                    "propertyTypeListValue": "1-Padre,2-Madre,3-Conygue,4-Tío,5-Tía,6-Cuñado,7-Cuñada,8-Suegro,9-Suegra,10-Hijo,11-Hija,12-Hemano,13-Hermana",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "128",
+                    "propertyName": "Fecha Nacimiento",
+                    "propertyValue": "01/01/1990",
+                    "propertyDescription": "Fecha nacimiento del beneficiario a agregar",
+                    "propertyTypeDescription": "DateTime",
+                    "propertyTypeId": 2,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "129",
+                    "propertyName": "Afiliado a EPS",
+                    "propertyValue": "Sura",
+                    "propertyDescription": "EPS donde se encuentra afiliado",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                }
+            ]
+        },
+        {
+            "name": "Tomador",
+            "inputParameterId": 97,
+            "inputParameterType": "Object",
+            "inputParameterValue": null,
+            "inputParameterDescription": "Tomador",
+            "inputParameterRequired": "false",
+            "showApi": false,
+            "inputParameterSchemaList": [
+                {
+                    "propertyId": "130",
+                    "propertyName": "Nombres",
+                    "propertyValue": "Usuario",
+                    "propertyDescription": "Nombres del tomador a agregar",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "131",
+                    "propertyName": "Apellidos",
+                    "propertyValue": "Prueba Sekure",
+                    "propertyDescription": "Apellidos del tomador a agregar",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "132",
+                    "propertyName": "Fecha Nacimiento",
+                    "propertyValue": "01/01/1990",
+                    "propertyDescription": "Fecha nacimiento del tomador a agregar",
+                    "propertyTypeDescription": "DateTime",
+                    "propertyTypeId": 2,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "133",
+                    "propertyName": "Autoriza Descuento",
+                    "propertyValue": "True",
+                    "propertyDescription": "Autoriza descuento en nomina",
+                    "propertyTypeDescription": "Boolean",
+                    "propertyTypeId": 4,
+                    "propertyTypeListValue": "True,False",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "134",
+                    "propertyName": "Asociado al FEG",
+                    "propertyValue": "True",
+                    "propertyDescription": "Asociado al FEG",
+                    "propertyTypeDescription": "Boolean",
+                    "propertyTypeId": 3,
+                    "propertyTypeListValue": "True,False",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "135",
+                    "propertyName": "Afiliado a EPS",
+                    "propertyValue": "Sura",
+                    "propertyDescription": "EPS donde se encuentra afiliado",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "false",
+                    "isAssistanceType": "false"
+                }
+            ]
+        }
+
+    ]    
+}

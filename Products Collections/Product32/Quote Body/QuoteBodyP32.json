@@ -1,0 +1,25 @@
+{
+    "productDetail": {
+        "productId": 32,
+        "productName": "Asistencia Hogar",
+        "policyTypeName": "Asistencias",
+        "insuranceCompanyName": "Andi Asistencia"
+    },
+    "policyHolder": 
+        {
+            "firstName": "Usuario",
+            "secondName": "Prueba",
+            "lastName": "Sekure",
+            "secondLastName": "Latam",
+            "birthdate": "2022-02-18T00:00:00Z",
+            "gender": "m",
+            "address": "Carrera 100 # 134 -10",
+            "identificationType": "1",
+            "identificationNumber": "1078985631",
+            "maritalStatus": "1",
+            "email": "prueba@email.com",
+            "phoneNumber": "3154789856"
+        },
+    
+    "parameters": []    
+}
