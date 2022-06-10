@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "75c227d0-e5eb-475a-9c6a-5ada8e647d94",
+		"name": "InsuranceOS Stage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "ec151c0d3e6648f88b4a65fc3a0b1ab1",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productDetail\": {\r\n        \"productId\": 143,\r\n        \"productName\": \"Cotización SOAT\",\r\n        \"policyTypeName\": \"SOAT\",\r\n        \"insuranceCompanyName\": \"AXA Colpatria\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"name\": \"Policy Holder\",\r\n            \"inputParameterId\": 498,\r\n            \"inputParameterType\": \"Object\",\r\n            \"inputParameterValue\": null,\r\n            \"inputParameterDescription\": \"Información requerida para el tomador\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": [\r\n                {\r\n                    \"propertyId\": \"582\",\r\n                    \"propertyName\": \"Telefono Celular\",\r\n                    \"propertyValue\": \"3148221877\",\r\n                    \"propertyDescription\": \"Numero de celular del titular de la póliza. No puede contener puntos, comas y/o espacios. Su longitud debe ser de 10 dígitos. Los primeros 3 dígitos deben coincidir con los pre-fijos celulares nacionales válidos: 310-311-312-313-314-320-321-322-323-324-315-316-317-318-302-303-304-300-301-309-319-305-304-350\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"583\",\r\n                    \"propertyName\": \"Email\",\r\n                    \"propertyValue\": \"jdan@gmail.com\",\r\n                    \"propertyDescription\": \"Correo electrónico del titular al que se enviará el SOAT\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"584\",\r\n                    \"propertyName\": \"Identificación\",\r\n                    \"propertyValue\": \"1061805338\",\r\n                    \"propertyDescription\": \"Corresponde al número de identificación del cliente\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"585\",\r\n                    \"propertyName\": \"Tipo de Identificación\",\r\n                    \"propertyValue\": \"1\",\r\n                    \"propertyDescription\": \"Se refiere al tipo de documento del cliente\",\r\n                    \"propertyTypeDescription\": \"List\",\r\n                    \"propertyTypeId\": 3,\r\n                    \"propertyTypeListValue\": \"1=CC(Cedula ciudadania), 2=CE(Cédula extranjeria),3=NIT (NIT), 4=TI(Tarjeta de identidad),5=PAS(Pasaporte)\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"586\",\r\n                    \"propertyName\": \"Primer Nombre\",\r\n                    \"propertyValue\": \"juan\",\r\n                    \"propertyDescription\": \"Primer Nombre del propietario del vehículo\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"587\",\r\n                    \"propertyName\": \"Segundo Nombre\",\r\n                    \"propertyValue\": \"\",\r\n                    \"propertyDescription\": \"Segundo Nombre del propietario del vehículo\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"588\",\r\n                    \"propertyName\": \"Primer Apellido\",\r\n                    \"propertyValue\": \"ruiz\",\r\n                    \"propertyDescription\": \"Primer Apellido del propietario del vehículo\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"propertyId\": \"589\",\r\n                    \"propertyName\": \"Segundo Apellido\",\r\n                    \"propertyValue\": \"\",\r\n                    \"propertyDescription\": \"Segundo Apellido del propietario del vehículo\",\r\n                    \"propertyTypeDescription\": \"Text\",\r\n                    \"propertyTypeId\": 1,\r\n                    \"propertyTypeListValue\": \"\",\r\n                    \"propertyRequired\": \"true\",\r\n                    \"isAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"Placa\",\r\n            \"inputParameterId\": 499,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"ryg58e\",\r\n            \"inputParameterDescription\": \"Corresponde al número de placa, máximo 10 caracteres\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"name\": \"Codigo Ciudad\",\r\n            \"inputParameterId\": 500,\r\n            \"inputParameterType\": \"Text\",\r\n            \"inputParameterValue\": \"10001\",\r\n            \"inputParameterDescription\": \"Código de la ciudad de matrícula del vehículo\",\r\n            \"inputParameterRequired\": \"true\",\r\n            \"showApi\": true,\r\n            \"inputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Quote",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emmit",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "JX8AS3Mvlb9jxt17dHFHG1L24guLFhTt8mOpOnCA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "ec151c0d3e6648f88b4a65fc3a0b1ab1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Emit/045d5fb3-602b-4480-4554-08da3e882ffd",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Emit",
+						"045d5fb3-602b-4480-4554-08da3e882ffd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "JX8AS3Mvlb9jxt17dHFHG1L24guLFhTt8mOpOnCA",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "ec151c0d3e6648f88b4a65fc3a0b1ab1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Confirm/045d5fb3-602b-4480-4554-08da3e882ffd",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Confirm",
+						"045d5fb3-602b-4480-4554-08da3e882ffd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
