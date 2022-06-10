@@ -1,0 +1,129 @@
+{
+    "productDetail": {
+        "productId": 143,
+        "productName": "Cotización SOAT",
+        "policyTypeName": "SOAT",
+        "insuranceCompanyName": "AXA Colpatria"
+    },
+    "Parameters": [
+        {
+            "name": "Policy Holder",
+            "inputParameterId": 498,
+            "inputParameterType": "Object",
+            "inputParameterValue": null,
+            "inputParameterDescription": "Información requerida para el tomador",
+            "inputParameterRequired": "true",
+            "showApi": true,
+            "inputParameterSchemaList": [
+                {
+                    "propertyId": "582",
+                    "propertyName": "Telefono Celular",
+                    "propertyValue": "3148221877",
+                    "propertyDescription": "Numero de celular del titular de la póliza. No puede contener puntos, comas y/o espacios. Su longitud debe ser de 10 dígitos. Los primeros 3 dígitos deben coincidir con los pre-fijos celulares nacionales válidos: 310-311-312-313-314-320-321-322-323-324-315-316-317-318-302-303-304-300-301-309-319-305-304-350",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "583",
+                    "propertyName": "Email",
+                    "propertyValue": "jdan@gmail.com",
+                    "propertyDescription": "Correo electrónico del titular al que se enviará el SOAT",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "584",
+                    "propertyName": "Identificación",
+                    "propertyValue": "1061805338",
+                    "propertyDescription": "Corresponde al número de identificación del cliente",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "585",
+                    "propertyName": "Tipo de Identificación",
+                    "propertyValue": "1",
+                    "propertyDescription": "Se refiere al tipo de documento del cliente",
+                    "propertyTypeDescription": "List",
+                    "propertyTypeId": 3,
+                    "propertyTypeListValue": "1=CC(Cedula ciudadania), 2=CE(Cédula extranjeria),3=NIT (NIT), 4=TI(Tarjeta de identidad),5=PAS(Pasaporte)",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "586",
+                    "propertyName": "Primer Nombre",
+                    "propertyValue": "juan",
+                    "propertyDescription": "Primer Nombre del propietario del vehículo",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "587",
+                    "propertyName": "Segundo Nombre",
+                    "propertyValue": "",
+                    "propertyDescription": "Segundo Nombre del propietario del vehículo",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "588",
+                    "propertyName": "Primer Apellido",
+                    "propertyValue": "ruiz",
+                    "propertyDescription": "Primer Apellido del propietario del vehículo",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                },
+                {
+                    "propertyId": "589",
+                    "propertyName": "Segundo Apellido",
+                    "propertyValue": "",
+                    "propertyDescription": "Segundo Apellido del propietario del vehículo",
+                    "propertyTypeDescription": "Text",
+                    "propertyTypeId": 1,
+                    "propertyTypeListValue": "",
+                    "propertyRequired": "true",
+                    "isAssistanceType": "false"
+                }
+            ]
+        },
+        {
+            "name": "Placa",
+            "inputParameterId": 499,
+            "inputParameterType": "Text",
+            "inputParameterValue": "ryg58e",
+            "inputParameterDescription": "Corresponde al número de placa, máximo 10 caracteres",
+            "inputParameterRequired": "true",
+            "showApi": true,
+            "inputParameterSchemaList": []
+        },
+        {
+            "name": "Codigo Ciudad",
+            "inputParameterId": 500,
+            "inputParameterType": "Text",
+            "inputParameterValue": "10001",
+            "inputParameterDescription": "Código de la ciudad de matrícula del vehículo",
+            "inputParameterRequired": "true",
+            "showApi": true,
+            "inputParameterSchemaList": []
+        }
+    ]
+}
