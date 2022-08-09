@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "f101fa26-d8f2-49fa-b172-ccc9b4141d7f",
+		"name": "163 AxaColpatria Vida Deudor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19822207"
+	},
+	"item": [
+		{
+			"name": "GetProductId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{enpoint}}/163",
+					"host": [
+						"{{enpoint}}"
+					],
+					"path": [
+						"163"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetColombiaCityByCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7080/api/GetColombiaCityByCode/5042000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"api",
+						"GetColombiaCityByCode",
+						"5042000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "6ff2ef1bb55d45b4a578239fa89f8aca",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 163,\r\n        \"ProductName\": \"Vida Deudor\",\r\n        \"PolicyTypeName\": \"Vida\",\r\n        \"InsuranceCompanyName\": \"AXA Colpatria\"\r\n    },\r\n    \"parameters\": [\r\n        {\r\n            \"Name\": \"ValorAsegurar\",\r\n            \"InputParameterId\": 541,\r\n            \"InputParameterType\": \"Numeric\",\r\n            \"InputParameterValue\": \"12000000\",\r\n            \"InputParameterDescription\": \"Campo númerico, obligatorio. Valor crédito a asegurar\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"NoCuotas\",\r\n            \"InputParameterId\": 542,\r\n            \"InputParameterType\": \"Numeric\",\r\n            \"InputParameterValue\": \"12\",\r\n            \"InputParameterDescription\": \"Campo númerico, obligatorio. Número de cuotas del crédito a asegurar\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"FechaDesembolso\",\r\n            \"InputParameterId\": 543,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"27-07-2025\",\r\n            \"InputParameterDescription\": \"Campo alfanumérico, obligatorio en formato dd-mm-aaaa. Fecha en la cual se realiza el desembolso del crédito al cliente\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"NumeroCredito\",\r\n            \"InputParameterId\": 544,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"20\",\r\n            \"InputParameterDescription\": \"Campo alfanumérico, obligatorio. número asociado al crédito\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"RespuestaAsegurabilidad\",\r\n            \"InputParameterId\": 545,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"si\",\r\n            \"InputParameterDescription\": \"Campo alfanumérico, obligatorio. El usuario debe responder SI o NO a la siguiente pregunta: Confirmo que me encuentro en buen estado de salud y que no padezco, ni he padecido cáncer, cirrosis, hepatitis B, hipertensión arterial, diabetes, SIDA, enfermedades neurológicas, enfermedades psiquiátricas, afecciones cardíacas, insuficiencia renal, accidentes cardiovasculares y en general ninguna enfermedad grave o crónica  Fecha en la cual se realiza el desembolso del crédito al cliente\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"PolicyHolder\",\r\n            \"InputParameterId\": 546,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"Información del Tomador\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": [\r\n                {\r\n                    \"PropertyId\": \"619\",\r\n                    \"PropertyName\": \"IdentificationType\",\r\n                    \"PropertyValue\": \"1\",\r\n                    \"PropertyDescription\": \"Campo númerico, obligatorio, se debe de enviar el número que corresponda según el listado de opciones\",\r\n                    \"PropertyTypeDescription\": \"List\",\r\n                    \"PropertyTypeId\": 3,\r\n                    \"PropertyTypeListValue\": \"Posibles valores CC = 1, CE = 2, PAS = 5\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"620\",\r\n                    \"PropertyName\": \"IdentificationNumber\",\r\n                    \"PropertyValue\": \"88888888\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. datos del tomador\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"621\",\r\n                    \"PropertyName\": \"Birthdate\",\r\n                    \"PropertyValue\": \"17-05-1966\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio en formato dd-mm-aaaa. Fecha de nacimiento del tomador\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"622\",\r\n                    \"PropertyName\": \"FirstName\",\r\n                    \"PropertyValue\": \"Bruce\",\r\n                    \"PropertyDescription\": \"Campo texto, obligatorio. Primer nombre del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"623\",\r\n                    \"PropertyName\": \"SecondName\",\r\n                    \"PropertyValue\": \"Thomas\",\r\n                    \"PropertyDescription\": \"Campo texto. Segundo nombre del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"624\",\r\n                    \"PropertyName\": \"LastName\",\r\n                    \"PropertyValue\": \"Wayne\",\r\n                    \"PropertyDescription\": \"Campo texto, obligatorio. Primer apellido del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"625\",\r\n                    \"PropertyName\": \"SecondLastName\",\r\n                    \"PropertyValue\": \"junior\",\r\n                    \"PropertyDescription\": \"Campo texto. Segundo apellido del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"626\",\r\n                    \"PropertyName\": \"PhoneNumber\",\r\n                    \"PropertyValue\": \"3005551234\",\r\n                    \"PropertyDescription\": \"Campo texto, obligatorio. número de contacto del titular de la póliza, debe tener 10 caracteres\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"627\",\r\n                    \"PropertyName\": \"Email\",\r\n                    \"PropertyValue\": \"iam@batman.com\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. Correo electrónico del titular asociado a la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"628\",\r\n                    \"PropertyName\": \"Address\",\r\n                    \"PropertyValue\": \"Cr9 99-99\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. Direccion del tomador\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"629\",\r\n                    \"PropertyName\": \"CityCode\",\r\n                    \"PropertyValue\": \"5\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. Es requerido hacer una petición al ASK Sekure para obtener el código divipola asociado a la ciudad de residencia\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"630\",\r\n                    \"PropertyName\": \"ExpeditionDate\",\r\n                    \"PropertyValue\": \"10-10-2000\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio en formato dd-mm-aaaa. Fecha de expedición del documento de identidad\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{enpoint}}/Quote",
+					"host": [
+						"{{enpoint}}"
+					],
+					"path": [
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "6ff2ef1bb55d45b4a578239fa89f8aca",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{enpoint}}/Confirm/cbd39f21-23cf-4f81-cc76-08da71186193",
+					"host": [
+						"{{enpoint}}"
+					],
+					"path": [
+						"Confirm",
+						"cbd39f21-23cf-4f81-cc76-08da71186193"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "6ff2ef1bb55d45b4a578239fa89f8aca",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{enpoint}}/Emit/cbd39f21-23cf-4f81-cc76-08da71186193",
+					"host": [
+						"{{enpoint}}"
+					],
+					"path": [
+						"Emit",
+						"cbd39f21-23cf-4f81-cc76-08da71186193"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "enpoint",
+			"value": "http://localhost:7089/api/Products",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "12becc3b-55b0-41fb-93d6-3b356394c2f3",
+		"name": "164 Preprod AskSekure Ciudades",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AskSekure OS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "6ff2ef1bb55d45b4a578239fa89f8aca",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tunja\",\r\n    \"dptoDesc\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSPreProd/Products/AskSekure/productId=164&productName=AskSekure-ObtenerCiudades",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSPreProd",
+						"Products",
+						"AskSekure",
+						"productId=164&productName=AskSekure-ObtenerCiudades"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "12c61c1552264ea1a2961df2e47dc2e5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
