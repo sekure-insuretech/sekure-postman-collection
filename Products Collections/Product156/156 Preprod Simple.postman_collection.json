@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "b3f4a00b-859d-4783-9a46-b911463105bd",
+		"name": "156 Preprod Simple",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quote",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 156,\r\n        \"ProductName\": \"Property-SURA Quote\",\r\n        \"PolicyTypeName\": \"Pymes\",\r\n        \"InsuranceCompanyName\": \"Sura\"\r\n    },\r\n\r\n    \"Parameters\": [\r\n        {\r\n            \"Name\": \"Folio\",\r\n            \"InputParameterId\": 508,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"0\",\r\n            \"InputParameterDescription\": \"Número de solicitud asociado al sistema que realiza la petición de cotización\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"Moneda\",\r\n            \"InputParameterId\": 509,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"USD\",\r\n            \"InputParameterDescription\": \"Moneda en la cual se hará la cotización. Los valores a recibir son: MXP (pesos mexicanos) y USD (dolar americano)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"FechaInicioVigencia\",\r\n            \"InputParameterId\": 510,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"2022-07-21\",\r\n            \"InputParameterDescription\": \"Se trata de la fecha de inicio de vigencia debe ser una fecha igual o superior a hoy y menor a 30 días, el formato es yyyy-mm-dd\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"Giro\",\r\n            \"InputParameterId\": 511,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"P410002\",\r\n            \"InputParameterDescription\": \"Clave de giro asociado a la categoria del inmueble seleccionado por el usuario, El valor se debe tomar del uso del catalogo AskSekure-ObtenerGiroPES tomando el campo clave\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"TipoInmueble\",\r\n            \"InputParameterId\": 512,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"01\",\r\n            \"InputParameterDescription\": \"Indica el tipo de inmueble, posibles valores: 01 (Propio), 02 (Arrendado)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"TipoConstruccion\",\r\n            \"InputParameterId\": 514,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"M1\",\r\n            \"InputParameterDescription\": \"Indica el tipo de Construcción, posibles valores: M1 (Muros de Tabique y Techos de Concreto), MM1 (Muros de Tabique y Techos de Lámina)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"CodigoPostal\",\r\n            \"InputParameterId\": 515,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"11890\",\r\n            \"InputParameterDescription\": \"Corresponde al código postal donde se encuentra ubicada la propiedad\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"NumeroCalle\",\r\n            \"InputParameterId\": 516,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"Numero\",\r\n            \"InputParameterDescription\": \"Número de calle\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"NumerodePisos\",\r\n            \"InputParameterId\": 517,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"1\",\r\n            \"InputParameterDescription\": \"Posibles valores: 1 (DE 1 A 5 PISOS), 2 (DE 6 A 10 PISOS), 3 (DE 11 A 15 PISOS), 4 (DE 16 A 20 PISOS), 5 (21 O MAS PISOS)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"PolicyHolder\",\r\n            \"InputParameterId\": 518,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"Información del Tomador\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": [\r\n                {\r\n                    \"PropertyId\": \"591\",\r\n                    \"PropertyName\": \"PhoneNumber\",\r\n                    \"PropertyValue\": \"3127084299\",\r\n                    \"PropertyDescription\": \"Debe tener 10 caracteres\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"592\",\r\n                    \"PropertyName\": \"Email\",\r\n                    \"PropertyValue\": \"juan.rendon@sekure.com.co\",\r\n                    \"PropertyDescription\": \"Correo electrónico del titular asociadao a la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"593\",\r\n                    \"PropertyName\": \"FirstName\",\r\n                    \"PropertyValue\": \"Juan\",\r\n                    \"PropertyDescription\": \"Primer Nombre del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"594\",\r\n                    \"PropertyName\": \"SecondName\",\r\n                    \"PropertyValue\": \"David\",\r\n                    \"PropertyDescription\": \"Segundo Nombre del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"595\",\r\n                    \"PropertyName\": \"LastName\",\r\n                    \"PropertyValue\": \"Rendón\",\r\n                    \"PropertyDescription\": \"Primer Apellido del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"596\",\r\n                    \"PropertyName\": \"SecondLastName\",\r\n                    \"PropertyValue\": \"Serna\",\r\n                    \"PropertyDescription\": \"Segundo Apellido del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"597\",\r\n                    \"PropertyName\": \"address\",\r\n                    \"PropertyValue\": \"Laureles Cra8\",\r\n                    \"PropertyDescription\": \"Dirección del titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"Name\": \"SAEdificio\",\r\n            \"InputParameterId\": 519,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"1000\",\r\n            \"InputParameterDescription\": \"Suma asegurada edificio, El rango de valores para MXP es de (1000 - 20.000.000) para USD es de (55.55 - 1.000.000). Se tiene un tope de hasta MXP $20,000,000 o USD 1,000,000 desglosados en las coberturas de Edificio + Contenidos + Daño Interno. \",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"SAContenidos\",\r\n            \"InputParameterId\": 520,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"1000\",\r\n            \"InputParameterDescription\": \"Suma asegurada Contenidos, El valor minimo para MXP es de (1000) para USD es de (55.55). Se tiene un tope de hasta MXP $20,000,000 o USD 1,000,000 desglosados en las coberturas de Edificio + Contenidos + Daño Interno. \",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"SADañosInternos\",\r\n            \"InputParameterId\": 521,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"1000\",\r\n            \"InputParameterDescription\": \"Suma asegurada para daños EQUIPO ELECTRÓNICO, MAQUINARÍA Y CALDERAS, El rango de valores para MXP es de (1000 - 10.000.000) para USD es de (55.55 - 500.000). Se tiene un tope de hasta MXP $20,000,000 o USD 1,000,000 desglosados en las coberturas de Edificio + Contenidos + Daño Interno.\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"SADañosATerceros\",\r\n            \"InputParameterId\": 522,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"1000\",\r\n            \"InputParameterDescription\": \"Suma asegurada para daños a Terceros, El rango de valores para MXP es de (300% de la suma de edificio y contenidos - 10.000.000) para USD es de (300% de la suma de edificio y contenidos - 500.000)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"FormaPago\",\r\n            \"InputParameterId\": 523,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"\\\"\\\"\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSPreProd/Products/Quote",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSPreProd",
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{YourApiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ProductDetail\": {\r\n        \"ProductId\": 159,\r\n        \"ProductName\": \"M&ERUS\",\r\n        \"PolicyTypeName\": \"M&E\",\r\n        \"InsuranceCompanyName\": \"RUS\"\r\n    },\r\n    \"parameters\": [\r\n        {\r\n            \"Name\": \"IdPlan\",\r\n            \"InputParameterId\": 526,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"ROBO_ALQUILER_EQUIPOS_TURISMO_PLAN_1D\",\r\n            \"InputParameterDescription\": \"Se obtiene de la cotización realizada\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"InicioVigencia\",\r\n            \"InputParameterId\": 527,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"2022-07-22\",\r\n            \"InputParameterDescription\": \"Fecha inicio de vigencia\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSPreProd/Products/Confirm/55aa8e9c-6fae-4e4a-60da-08da6c35dbb4",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSPreProd",
+						"Products",
+						"Confirm",
+						"55aa8e9c-6fae-4e4a-60da-08da6c35dbb4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emmit V1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "{{YourApiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 156,\r\n        \"ProductName\": \"Property-SURA Quote\",\r\n        \"PolicyTypeName\": \"Pymes\",\r\n        \"InsuranceCompanyName\": \"Sura\"\r\n    },\r\n\r\n    \"parameters\": [\r\n        {\r\n            \"Name\": \"PolicyHolder\",\r\n            \"InputParameterId\": 552,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"Información del tomador, para este caso se trata de una empresa\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": [\r\n                {\r\n                    \"PropertyId\": \"637\",\r\n                    \"PropertyName\": \"CompanyPostalCode\",\r\n                    \"PropertyValue\": \"11890\",\r\n                    \"PropertyDescription\": \"Campo númerico, obligatorio. Corresponde al código postal donde se encuentra ubicada la empresa titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"639\",\r\n                    \"PropertyName\": \"CompanyStreetNumber\",\r\n                    \"PropertyValue\": \"202\",\r\n                    \"PropertyDescription\": \"Campo numérico, opcional, Número de calle\",\r\n                    \"PropertyTypeDescription\": \"Number\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"640\",\r\n                    \"PropertyName\": \"CompanyPhone\",\r\n                    \"PropertyValue\": \"3225556969\",\r\n                    \"PropertyDescription\": \"Campo numérico, obligatorio. Debe tener 10 caracteres\",\r\n                    \"PropertyTypeDescription\": \"Number\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"641\",\r\n                    \"PropertyName\": \"CompanyEmail\",\r\n                    \"PropertyValue\": \"empresa@sekure.com.co\",\r\n                    \"PropertyDescription\": \"Campo texto, obligatorio. Correo electrónico del titular asociadao a la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"642\",\r\n                    \"PropertyName\": \"CompanyName\",\r\n                    \"PropertyValue\": \"RenSer\",\r\n                    \"PropertyDescription\": \"Campo alfabético, obligatorio. Nombre de la empresa tomadora de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"643\",\r\n                    \"PropertyName\": \"CompanyAddress\",\r\n                    \"PropertyValue\": \"Ciudad de Mexico Cra 87\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. Dirección de la empresa titular de la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"644\",\r\n                    \"PropertyName\": \"CompanyIdentificationNumber\",\r\n                    \"PropertyValue\": \"SDI770408N60\",\r\n                    \"PropertyDescription\": \"Campo alfanumérico, obligatorio. RFC (Registro federal de contribuyentes)\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"645\",\r\n                    \"PropertyName\": \"CompanyDate\",\r\n                    \"PropertyValue\": \"2015-10-15\",\r\n                    \"PropertyDescription\": \"Campo datetime, obligatorio. Fecha de constitución de la empresa, el formato debe ser yyyy-mm-dd \",\r\n                    \"PropertyTypeDescription\": \"DateTime\",\r\n                    \"PropertyTypeId\": 2,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sekure.com.co/OSPreprod/v1/Products/Emit/a4a1c65b-483c-429b-fabc-08da849b73b7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sekure",
+						"com",
+						"co"
+					],
+					"path": [
+						"OSPreprod",
+						"v1",
+						"Products",
+						"Emit",
+						"a4a1c65b-483c-429b-fabc-08da849b73b7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
