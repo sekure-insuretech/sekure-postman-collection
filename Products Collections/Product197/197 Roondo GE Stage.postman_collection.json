@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "72451c21-01c3-492d-8ed4-624bb02efcef",
+		"name": "197 Roondo GE Stage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta ProductID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/v1/Products/208",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"v1",
+						"Products",
+						"208"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta SessionID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sekure.com.co/OSPreProd/Products/stage/b1698a96-f4b9-47d1-a9aa-08dac809e45b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sekure",
+						"com",
+						"co"
+					],
+					"path": [
+						"OSPreProd",
+						"Products",
+						"stage",
+						"b1698a96-f4b9-47d1-a9aa-08dac809e45b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Cotizacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Quote/Session/21ca46a9-6e12-4820-416f-08dadfc1f6b5",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Quote",
+						"Session",
+						"21ca46a9-6e12-4820-416f-08dadfc1f6b5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 197,\r\n        \"ProductName\": \"GarantíaExtendida\",\r\n        \"PolicyTypeName\": \"GE\",\r\n        \"InsuranceCompanyName\": \"SBS\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"Name\": \"ValorAsegurar\",\r\n            \"InputParameterId\": 610,\r\n            \"InputParameterType\": \"Numeric\",\r\n            \"InputParameterValue\": \"3500000\",\r\n            \"InputParameterDescription\": \"Campo númerico, obligatorio. Valor del dispositivo\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"Categoría\",\r\n            \"InputParameterId\": 611,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"Celular\",\r\n            \"InputParameterDescription\": \"Campo de texto, obligatorio. Listado de categorías (Celular, Laptop, Desktop, Consola, Audífonos)\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"Marca\",\r\n            \"InputParameterId\": 612,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"PATITO\",\r\n            \"InputParameterDescription\": \"Obligatorio. Marca del articulo\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"Referencia\",\r\n            \"InputParameterId\": 613,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"ABC123\",\r\n            \"InputParameterDescription\": \"Obligatorio, alfanumerico. Referencia del artículo\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"SKU\",\r\n            \"InputParameterId\": 619,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"JKL2589\",\r\n            \"InputParameterDescription\": \"Obligatorio, alfanumerico. Código inventario\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Quote",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 197,\r\n        \"ProductName\": \"GarantíaExtendida\",\r\n        \"PolicyTypeName\": \"GE\",\r\n        \"InsuranceCompanyName\": \"SBS\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"Name\": \"iMei\",\r\n            \"InputParameterId\": 614,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"123456000\",\r\n            \"InputParameterDescription\": \"Campo numérico, obligatorio si es celular. Imei del dispositivo\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"SerialNumber\",\r\n            \"InputParameterId\": 615,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"AbCPEPITO\",\r\n            \"InputParameterDescription\": \"Campo alfanumérico, obligatorio. Número de serie del dispositivo\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"No. Factura\",\r\n            \"InputParameterId\": 616,\r\n            \"InputParameterType\": \"Text\",\r\n            \"InputParameterValue\": \"FAC006\",\r\n            \"InputParameterDescription\": \"Campo alfanumérico, obligatorio. Número de factura\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": []\r\n        },\r\n        {\r\n            \"Name\": \"PolicyHolder\",\r\n            \"InputParameterId\": 617,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"Información del Tomador\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": [\r\n                {\r\n                    \"PropertyId\": \"815\",\r\n                    \"PropertyName\": \"IdentificationType\",\r\n                    \"PropertyValue\": \"1\",\r\n                    \"PropertyDescription\": \"Obligatorio, númerico tipo de identificación del tomador\",\r\n                    \"PropertyTypeDescription\": \"List\",\r\n                    \"PropertyTypeId\": 3,\r\n                    \"PropertyTypeListValue\": \"1 = Cédula ciudadanía, 2 = Cédula extranjería, 5 = Pasaporte\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"816\",\r\n                    \"PropertyName\": \"IdentificationNumber\",\r\n                    \"PropertyValue\": \"123456\",\r\n                    \"PropertyDescription\": \"Obligatorio, Numerico\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"817\",\r\n                    \"PropertyName\": \"Birthdate\",\r\n                    \"PropertyValue\": \"16/08/1966\",\r\n                    \"PropertyDescription\": \"Obligatorio, Date, fecha nacimiento del tomador de la póliza. Formato: dd/MM/yyyy\",\r\n                    \"PropertyTypeDescription\": \"Date\",\r\n                    \"PropertyTypeId\": 2,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"818\",\r\n                    \"PropertyName\": \"FirstName\",\r\n                    \"PropertyValue\": \"PRUEBAS\",\r\n                    \"PropertyDescription\": \"Primer Nombre del titular de la póliza, campo Alfabético, Obligatorio\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"819\",\r\n                    \"PropertyName\": \"SecondName\",\r\n                    \"PropertyValue\": \"ANGELES\",\r\n                    \"PropertyDescription\": \"Segundo Nombre del titular de la póliza, campo Alfabético, opcional\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"820\",\r\n                    \"PropertyName\": \"LastName\",\r\n                    \"PropertyValue\": \"SEGUNDO\",\r\n                    \"PropertyDescription\": \"Primer Apellido del titular de la póliza, campo Alfabético, Obligatorio\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"821\",\r\n                    \"PropertyName\": \"SecondLastName\",\r\n                    \"PropertyValue\": \"APELLIDO\",\r\n                    \"PropertyDescription\": \"Segundo Apellido del titular de la póliza, campo Alfabético, Opcional\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"822\",\r\n                    \"PropertyName\": \"PhoneNumber\",\r\n                    \"PropertyValue\": \"1234567890\",\r\n                    \"PropertyDescription\": \"Debe tener 10 caracteres, numerico, obligatorio\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"823\",\r\n                    \"PropertyName\": \"Email\",\r\n                    \"PropertyValue\": \"lizetharomeroc@gmail.com\",\r\n                    \"PropertyDescription\": \"Obligatorio, Correo electrónico del titular asociado a la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"824\",\r\n                    \"PropertyName\": \"City\",\r\n                    \"PropertyValue\": \"12345\",\r\n                    \"PropertyDescription\": \"Código divipola asociado a la ciudad de residencia, campo Numerico, Obligatorio,debe validarse que el código exista utilizando el método del ASK Sekure para tal efecto\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"825\",\r\n                    \"PropertyName\": \"Address\",\r\n                    \"PropertyValue\": \"Calle de la 15 nO 25- 96\",\r\n                    \"PropertyDescription\": \"Alfanumerico, obligatorio, direccion del tomador\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"826\",\r\n                    \"PropertyName\": \"ExpeditionDate\",\r\n                    \"PropertyValue\": \"04/04/1986\",\r\n                    \"PropertyDescription\": \"Date, obligatorio, fecha de expedición del documento de identidad. Formato: dd/MM/yyyy\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 2,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Confirm/69262847-aaf0-4423-244d-08dae2983ec0",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Confirm",
+						"69262847-aaf0-4423-244d-08dae2983ec0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emmit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/v1/Products/Emit/925caf7f-6751-4ca4-0f61-08dae1f4bdc1",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"v1",
+						"Products",
+						"Emit",
+						"925caf7f-6751-4ca4-0f61-08dae1f4bdc1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Ciudades",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"dptoDesc\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSPreProd/Products/AskSekure/productId=164&productName=AskSekure-ObtenerCiudades?code=ec151c0d3e6648f88b4a65fc3a0b1ab1",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSPreProd",
+						"Products",
+						"AskSekure",
+						"productId=164&productName=AskSekure-ObtenerCiudades"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "ec151c0d3e6648f88b4a65fc3a0b1ab1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

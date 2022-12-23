@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "f14be7ed-d2ae-479b-8c14-8fa0596d1eca",
+		"name": "207 Accidentes Personales Palig",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta SessionID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sekure.com.co/OSStage/Products/stage/00fe3a40-b3aa-4b72-2e03-08dae2b167e0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sekure",
+						"com",
+						"co"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"stage",
+						"00fe3a40-b3aa-4b72-2e03-08dae2b167e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Cotizacion",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Quote/Session/00fe3a40-b3aa-4b72-2e03-08dae2b167e0",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Quote",
+						"Session",
+						"00fe3a40-b3aa-4b72-2e03-08dae2b167e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta ProductID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/v1/Products/207",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"v1",
+						"Products",
+						"207"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 207,\r\n        \"ProductName\": \"Accidentes Personales\",\r\n        \"PolicyTypeName\": \"Accidentes Personales\",\r\n        \"InsuranceCompanyName\": \"Medismart\"\r\n    },\r\n    \"Parameters\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Quote",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 207,\r\n        \"ProductName\": \"Accidentes Personales\",\r\n        \"PolicyTypeName\": \"Accidentes Personales\",\r\n        \"InsuranceCompanyName\": \"Palig\",\r\n        \"ProductCover\": \"https://github.com/JhotamsDeveloper/sekure-sdk-dotnet\",\r\n        \"DeveloperGuide\": \"https://github.com/JhotamsDeveloper/sekure-sdk-dotnet\"\r\n    },\r\n\r\n    \"Parameters\": [\r\n        {\r\n            \"Name\": \"PolicyHolder\",\r\n            \"InputParameterId\": 654,\r\n            \"InputParameterType\": \"Object\",\r\n            \"InputParameterValue\": \"\",\r\n            \"InputParameterDescription\": \"Información del Tomador\",\r\n            \"InputParameterRequired\": \"true\",\r\n            \"ShowApi\": true,\r\n            \"InputParameterSchemaList\": [\r\n                {\r\n                    \"PropertyId\": \"881\",\r\n                    \"PropertyName\": \"IdentificationNumber\",\r\n                    \"PropertyValue\": \"43417772\",\r\n                    \"PropertyDescription\": \"Obligatorio, Numerico\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"882\",\r\n                    \"PropertyName\": \"FirstName\",\r\n                    \"PropertyValue\": \"Mariana\",\r\n                    \"PropertyDescription\": \"Primer Nombre del titular de la póliza, campo Alfabético, Obligatorio\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"883\",\r\n                    \"PropertyName\": \"SecondName\",\r\n                    \"PropertyValue\": \"\",\r\n                    \"PropertyDescription\": \"Segundo Nombre del titular de la póliza, campo Alfabético, opcional\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"884\",\r\n                    \"PropertyName\": \"LastName\",\r\n                    \"PropertyValue\": \"Sanmiguel\",\r\n                    \"PropertyDescription\": \"Primer Apellido del titular de la póliza, campo Alfabético, Obligatorio\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"885\",\r\n                    \"PropertyName\": \"SecondLastName\",\r\n                    \"PropertyValue\": \"\",\r\n                    \"PropertyDescription\": \"Segundo Apellido del titular de la póliza, campo Alfabético, Opcional\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"false\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"886\",\r\n                    \"PropertyName\": \"Gender\",\r\n                    \"PropertyValue\": \"f\",\r\n                    \"PropertyDescription\": \"Se debe enviar la letra que corresponda según el listado de opciones.\",\r\n                    \"PropertyTypeDescription\": \"List\",\r\n                    \"PropertyTypeId\": 3,\r\n                    \"PropertyTypeListValue\": \"F = Femenino, M = Masculino, NA = No aplica\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"887\",\r\n                    \"PropertyName\": \"Email\",\r\n                    \"PropertyValue\": \"juan.pruebas.sekure@gmail.com\",\r\n                    \"PropertyDescription\": \"Obligatorio, Correo electrónico del titular asociado a la póliza\",\r\n                    \"PropertyTypeDescription\": \"Text\",\r\n                    \"PropertyTypeId\": 1,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                },\r\n                {\r\n                    \"PropertyId\": \"888\",\r\n                    \"PropertyName\": \"Birthdate\",\r\n                    \"PropertyValue\": \"22/10/2001\",\r\n                    \"PropertyDescription\": \"Obligatorio, Date, fecha nacimiento del tomador de la póliza, Formato: dd/MM/yyyy\",\r\n                    \"PropertyTypeDescription\": \"Date\",\r\n                    \"PropertyTypeId\": 2,\r\n                    \"PropertyTypeListValue\": \"\",\r\n                    \"PropertyRequired\": \"true\",\r\n                    \"IsAssistanceType\": \"false\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/Products/Confirm/285ebf54-3dfc-4e40-d25b-08dae456a153",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"Products",
+						"Confirm",
+						"285ebf54-3dfc-4e40-d25b-08dae456a153"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "skr-key",
+						"value": "YourApiKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductDetail\": {\r\n        \"ProductId\": 207,\r\n        \"ProductName\": \"Accidentes Personales\",\r\n        \"PolicyTypeName\": \"Accidentes Personales\",\r\n        \"InsuranceCompanyName\": \"Medismart\"\r\n    },\r\n    \"Parameters\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://skr.azure-api.net/OSStage/v1/Products/Emit/a111e134-d183-434c-2324-08dae454a317",
+					"protocol": "https",
+					"host": [
+						"skr",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"OSStage",
+						"v1",
+						"Products",
+						"Emit",
+						"a111e134-d183-434c-2324-08dae454a317"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
